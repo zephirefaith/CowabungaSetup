@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <name>cowabunga</name>
+  <version>0.0.0</version>
+  <description>TUrtlebot Bringup Launch Scripts</description>
+
+  <maintainer email="priyamp@gatech.edu">Priyam Parashar</maintainer>
+  <author email="priyamp@gatech.edu">Priyam Parashar</author>
+  
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <!-- Turtlebot Bringup -->
+  <run_depend>turtlebot_bringup</run_depend>
+
+  <!-- Hokuyo Laser -->
+  <run_depend>urg_node</run_depend>
+
+  <!-- SOS Routine -->
+  <run_depend>teleop_help</run_depend>
+
+  <!-- RMS -->
+  <run_depend>rosbridge_server</run_depend>
+  <run_depend>mjpeg_server</run_depend>
+
+</package>

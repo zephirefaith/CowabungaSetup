@@ -1,0 +1,31 @@
+<!--
+
+  Author: Priyam Parashar, Georgia Institute of Technology
+  Version: October 23, 2015
+
+-->
+
+<launch>
+  <!-- Safety Params -->
+	<arg name="safety" default="true" />
+
+	<!-- Turtlebot Bringup -->
+	<include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+
+  <!-- Hokuyo Laser -->
+  <node pkg="urg_node" type="urg_node" name="urg_node">
+  <remap from="scan" to="base_scan" />
+    <param name="ip_address" value="192.168.0.10"/>
+    <param name="ip_port" value="10940"/>
+  </node>
+
+	<!-- Rosbridge websocket for RMS -->
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+
+  <!-- SOS Routine -->
+  <node pkg="teleop_help" type="teleop_help.py" name="teleop_help" />
+
+	<!-- Mjpeg Server -->
+	<node pkg="mjpeg_server" type="mjpeg_server" name="mjpeg_server" />
+
+</launch>
