@@ -1,4 +1,4 @@
-# cowabunga.launch
+## cowabunga.launch
 
 Calls:
 * minimal.launch
@@ -7,7 +7,7 @@ Calls:
 * mjpeg_server
 * teleop_help (might change this)
 
-#cowabunga_navigation.launch
+##cowabunga_navigation.launch
 
 Calls:
 * amcl
